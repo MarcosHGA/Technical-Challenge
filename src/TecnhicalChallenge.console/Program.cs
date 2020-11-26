@@ -18,7 +18,9 @@ namespace TecnhicalChallenge.console
 
             _divisorService = serviceProvider.GetService<IDivisorService>();
 
-            while (true)
+            string option;
+
+            do
             {
                 Console.Clear();
                 Console.WriteLine("Escolha uma opçao:");
@@ -27,7 +29,9 @@ namespace TecnhicalChallenge.console
                 Console.WriteLine("3 - Sair");
                 Console.Write("\nDigite a opção desejada: ");
 
-                switch (Console.ReadLine())
+                option = Console.ReadLine();
+
+                switch (option)
                 {
                     case "1":
                         Console.WriteLine($"\nVocê selecionou 'Calcular todos os divisores que compõem um número'");
@@ -37,15 +41,11 @@ namespace TecnhicalChallenge.console
                         Console.WriteLine($"\nVocê selecionou 'Calcular divisores primos que compoem um número'.");
                         CalcDivisor(true);
                         break;
-                    case "3":
-                        Environment.Exit(0);
-                        break;
                     default:
                         break;
                 }
-            }
+            } while (option != "3");
         }
-
 
         private static string GetUserEntry()
         {
