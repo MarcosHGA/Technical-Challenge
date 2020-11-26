@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>Console</RootNamespace>
+    <AssemblyName>TechnicalChallenge.Console</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TecnhicalChallenge.api\Api.csproj" />
+    <ProjectReference Include="..\TecnhicalChallenge.services\Services.csproj" />
+    <ProjectReference Include="..\TecnhicalChallenge.DI\DI.csproj" />
+  </ItemGroup>
+
+</Project>
